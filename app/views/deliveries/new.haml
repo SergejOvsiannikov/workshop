@@ -1,0 +1,3 @@
+= simple_form_for @delivery, url: deliveries_path do |f|
+  = f.input :emails, as: :text, input_html: { cols: 6, rows: 6 }
+  = f.submit
