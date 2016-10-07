@@ -45,4 +45,5 @@ end
 group :production do
   gem 'mina', '0.3.8'
   gem 'mina-unicorn'
+  gem 'unicorn'
 end
