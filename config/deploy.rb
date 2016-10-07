@@ -25,7 +25,7 @@ set :user, 'deployer'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_paths, ['config/database.yml', 'config/secrets.yml', 'log', 'config/unicorn.rb', 'tmp', 'socket']
+set :shared_paths, ['config/database.yml', 'config/secrets.yml', 'log', 'config/unicorn.rb', 'tmp', 'socket', 'public/uploads']
 
 # Optional settings:
 #   set :user, 'foobar'    # Username in the server to SSH to.
@@ -80,7 +80,7 @@ task :deploy => :environment do
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
-    # invoke :'rails:db_migrate'
+    invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
 
