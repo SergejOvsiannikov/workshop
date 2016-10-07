@@ -1,0 +1,41 @@
+%h2 Our Girls
+
+%table.table-striped
+  %thead
+    %tr
+      %th name
+      %th photo
+  %tbody
+    %tr
+      %td HENRY
+      %td
+        =image_tag('https://pp.vk.me/c630625/v630625625/4d29/aCtsjcgvvSk.jpg')
+    - @girls.each do |girl|
+      %tr
+        %td
+          =girl.profile.name
+        %td
+          =image_tag(girl.profile.avatar.url)
+
+-# %thead
+-#   %tr
+-#     %th Id
+-#     %th Name
+-#     %th Type
+-#     %th Active
+-#     %th Url
+-#     %th Jira filter
+-#     %th Update comments
+-#     %th Update state
+-# %tbody
+-#   - integrations.each_with_index do |integration, index|
+-#     %tr
+-#       %td= index + 1
+-#       %td= integration.name
+-#       %td= integration.itype
+-#       %td= integration.active
+-#       %td= integration.url
+-#       %td= integration.filter_id
+-#       %td= integration.update_comments
+-#       %td= integration.update_state
+

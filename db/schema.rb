@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007122540) do
+ActiveRecord::Schema.define(version: 20161007135629) do
 
   create_table "coupons", force: :cascade do |t|
     t.string   "code"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20161007122540) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "avatar"
+    t.integer  "girl_id"
   end
 
   create_table "users", force: :cascade do |t|
