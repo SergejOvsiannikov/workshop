@@ -42,3 +42,7 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
+group :production do
+  gem 'mina', '0.3.8'
+  gem 'mina-unicorn'
+end
