@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
+gem 'libv8', '3.16.14.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -46,6 +47,6 @@ end
 
 group :production do
   gem 'mina', '0.3.8'
-  gem 'mina-unicorn'
+  gem 'mina-unicorn', :require => false
   gem 'unicorn'
 end
